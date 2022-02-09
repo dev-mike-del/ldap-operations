@@ -33,11 +33,11 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
-  <h3 align="center">LDAP Operations</h3>
+  <h1 align="center">LDAP Operations</h1>
 
   <p align="center">
     Python script that performs basic LDAP searches.
-    <br />
+<!--     <br />
     <a href="https://github.com/dev-mike-del/ldap_operations"><strong>Explore the docs »</strong></a>
     <br />
     <br />
@@ -45,14 +45,14 @@
     ·
     <a href="https://github.com/dev-mike-del/ldap_operations/issues">Report Bug</a>
     ·
-    <a href="https://github.com/dev-mike-del/ldap_operations/issues">Request Feature</a>
+    <a href="https://github.com/dev-mike-del/ldap_operations/issues">Request Feature</a> -->
   </p>
 </div>
 
 
 
 <!-- TABLE OF CONTENTS -->
-<details>
+<!-- <details>
   <summary>Table of Contents</summary>
   <ol>
     <li>
@@ -76,7 +76,7 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
+ -->
 
 
 <!-- ABOUT THE PROJECT -->
@@ -84,7 +84,9 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-This repo uses Forum Systems' Online LDAP Test Server to demonstrate how the search functions work on a live OpenLDAP server.
+This project offers the script ldap_ops.py as a developer tool for easy to use and straight foward LDAP queries. The script contains the class LDAPOps. That class creates a connection to an OpenLDAP server and maintains that connection for use through out the Class methods. The methods use the LDAP connection to perform searches/queries using the search/queries provide by the Python library python-ldap.
+
+The repo uses Forum Systems' LDAP Test Server to demonstrate how the search functions work on a live OpenLDAP server. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -92,6 +94,7 @@ This repo uses Forum Systems' Online LDAP Test Server to demonstrate how the sea
 
 ### Built With
 
+* [python3](https://docs.python.org/3.8/)
 * [python-ldap](https://www.python-ldap.org/en/python-ldap-3.3.0/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
