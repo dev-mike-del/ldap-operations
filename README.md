@@ -195,9 +195,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Michael Delgado - [LinkedIn profile](https://www.linkedin.com/in/mike-del/) - devmikedel@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/dev-mike-del/ldap_operations](https://github.com/dev-mike-del/ldap_operations)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
