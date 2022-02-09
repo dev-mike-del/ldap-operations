@@ -102,20 +102,20 @@ The repo uses Forum Systems' LDAP Test Server to demonstrate how the search func
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+<!-- ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple example steps. -->
 
-### Prerequisites
+<!-- ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
   npm install npm@latest -g
-  ```
+  ``` -->
 
-### Installation
+<!-- ### Installation
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
@@ -134,22 +134,22 @@ _Below is an example of how you can instruct your audience on installing and set
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
+ -->
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+<!-- ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top</a>)</p> -->
 
 
 
 <!-- ROADMAP -->
-## Roadmap
+<!-- ## Roadmap
 
 - [x] Add Changelog
 - [x] Add back to top links
@@ -161,12 +161,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top</a>)</p> -->
 
 
 
 <!-- CONTRIBUTING -->
-## Contributing
+<!-- ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -179,7 +179,7 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top</a>)</p> -->
 
 
 
@@ -204,7 +204,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 
 <!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+<!-- ## Acknowledgments
 
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
@@ -217,7 +217,7 @@ Use this space to list resources you find helpful and would like to give credit 
 * [Font Awesome](https://fontawesome.com)
 * [React Icons](https://react-icons.github.io/react-icons/search)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top</a>)</p> -->
 
 
 
