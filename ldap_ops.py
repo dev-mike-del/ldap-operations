@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from collections import OrderedDict
 import ldap
 
@@ -5,10 +7,10 @@ LOGIN_DN = 'cn=read-only-admin,dc=example,dc=com'
 LOGIN_PASSWORD = 'password'
 SERVER_ADDRESS = 'ldap://ldap.forumsys.com'
 
-class LDAPOps(object):
+class LdapOps(object):
     """Makes a connection to OpenLDAP and offers useful function."""
     def __init__(self, LOGIN_DN=LOGIN_DN, LOGIN_PASSWORD=LOGIN_PASSWORD, SERVER_ADDRESS=SERVER_ADDRESS):
-        """Set up an LDAPOps object."""
+        """Set up an LdapOps object."""
         self.BIND_DN = LOGIN_DN
         self.BIND_PASSWORD = LOGIN_PASSWORD
         self.base_dn = 'dc=example, dc=com'
