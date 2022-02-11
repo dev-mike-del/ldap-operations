@@ -37,15 +37,15 @@
 
   <p align="center">
     Python script that performs basic LDAP searches.
+<!--     <br />
+    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <br /> -->
     <br />
-<!--     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+<!--     <a href="https://github.com/github_username/repo_name">View Demo</a> -->
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/dev-mike-del/ldap_operations/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a> -->
+    <a href="https://github.com/dev-mike-del/ldap_operations/issues">Request Feature</a>
   </p>
 </div>
 
@@ -84,9 +84,37 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-This project offers the script ldap_ops.py as a developer tool for easy to use and straight foward LDAP queries. The script contains the class LDAPOps. That class creates a connection to an OpenLDAP server and maintains that connection for use through out the Class methods. The methods use the LDAP connection to perform searches/queries using the search/queries provide by the Python library python-ldap.
+This project offers the script ldap_ops.py as a developer tool for easy to use and straight foward LDAP queries. The script contains the class LDAPOps. That class creates a connection to an OpenLDAP server and maintains that connection for use through out the Class methods. The class methods use the LDAP connection to perform searches/queries using the search/queries provide by the Python library python-ldap.
 
 The repo uses Forum Systems' LDAP Test Server to demonstrate how the search functions work on a live OpenLDAP server.
+
+Methods:
+* get_user
+    * If user exists, returns a tuple. The tuple's first value is the
+        user's dn. The second value is the user's attributes. If the user
+        does not exist, return None.
+
+* user_exists
+    * If user exists, return True. Else, return False
+
+* get_all_user_objectclass
+    * Call "self.get_user" method. If the user exists, return a list of
+        the user's objectClasses. 
+    * Return Example: ['inetOrgPerson','organizationalPerson', 'person', 'top']
+
+* get_all_entries
+    * Return all entries from the base_dn using SCOPE_SUBTREE to include the
+        objects and all its descendants.
+
+* get_all_persons
+    * Return all entries with the objectClass of 'person
+
+* get_all_emails
+    * Return a dictionary of all email (mail) addresses from entries with
+        the objectClass of 'person.' The dictionary contains two keys. The
+        first key is "emails," and its value is a list of emails. The second key is
+        "errors" and its value is a list of returned entries that did not
+        include email addresses. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
