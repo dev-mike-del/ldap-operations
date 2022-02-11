@@ -89,27 +89,27 @@ This project offers the script ldap_ops.py as a developer tool for easy to use a
 The repo uses Forum Systems' LDAP Test Server to demonstrate how the search functions work on a live OpenLDAP server.
 
 Methods:
-* get_user
+* get_user(self, username:str) -> tuple:
     * If user exists, returns a tuple. The tuple's first value is the
         user's dn. The second value is the user's attributes. If the user
         does not exist, return None.
 
-* user_exists
+* user_exists(self, username:str) -> bool:
     * If user exists, return True. Else, return False
 
-* get_all_user_objectclass
+* get_all_user_objectclass(self, username:str) -> list
     * Call "self.get_user" method. If the user exists, return a list of
         the user's objectClasses. 
     * Return Example: ['inetOrgPerson','organizationalPerson', 'person', 'top']
 
-* get_all_entries
+* get_all_entries(self) -> list:
     * Return all entries from the base_dn using SCOPE_SUBTREE to include the
         objects and all its descendants.
 
-* get_all_persons
+* get_all_persons(self) -> list:
     * Return all entries with the objectClass of 'person
 
-* get_all_emails
+* get_all_emails(self) -> dict:
     * Return a dictionary of all email (mail) addresses from entries with
         the objectClass of 'person.' The dictionary contains two keys. The
         first key is "emails," and its value is a list of emails. The second key is
