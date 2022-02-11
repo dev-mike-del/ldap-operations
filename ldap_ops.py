@@ -9,7 +9,7 @@ SERVER_ADDRESS = 'ldap://ldap.forumsys.com'
 
 class LdapOps(object):
     """Makes a connection to OpenLDAP and offers useful function."""
-    def __init__(self, LOGIN_DN=LOGIN_DN, LOGIN_PASSWORD=LOGIN_PASSWORD, SERVER_ADDRESS=SERVER_ADDRESS):
+    def __init__(self, LOGIN_DN:str, LOGIN_PASSWORD:str, SERVER_ADDRESS:str):
         """Set up an LdapOps object."""
         self.BIND_DN = LOGIN_DN
         self.BIND_PASSWORD = LOGIN_PASSWORD
@@ -21,7 +21,7 @@ class LdapOps(object):
             print("Try/Except >>> {}".format(e))
             raise e
 
-    def get_user(self, username):
+    def get_user(self, username:str):
         user = self.ldap_connection.search_s(
                 self.base_dn,
                 ldap.SCOPE_SUBTREE,
@@ -32,7 +32,7 @@ class LdapOps(object):
         except IndexError:
             return None
 
-    def user_exists(self, username):
+    def user_exists(self, username:str):
         try:
             user = self.get_user(username)
             if user[0]:
@@ -40,7 +40,7 @@ class LdapOps(object):
         except TypeError:
             return False
 
-    def get_user_objectclass(self, username):
+    def get_user_objectclass(self, username:str):
         try:
             user = self.get_user(username)
             if user:
@@ -50,7 +50,7 @@ class LdapOps(object):
         except Exception as e:
             print(e)
 
-    def get_all_entries(self):
+    def get_all_entries(self) -> list:
         results = self.ldap_connection.search_s(
                 self.base_dn, 
                 ldap.SCOPE_SUBTREE, 
@@ -68,7 +68,7 @@ class LdapOps(object):
             pass
         return all_persons
 
-    def get_all_emails(self):
+    def get_all_emails(self) -> dict:
         try:
             all_emails = self.ldap_connection.search_s(
                     self.base_dn,
