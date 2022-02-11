@@ -4,7 +4,6 @@ import ldap
 LOGIN_DN = 'cn=read-only-admin,dc=example,dc=com'
 LOGIN_PASSWORD = 'password'
 SERVER_ADDRESS = 'ldap://ldap.forumsys.com'
-get_user_example = """('uid=newton,dc=example,dc=com', {'sn': [b'Newton'], 'objectClass': [b'inetOrgPerson', b'organizationalPerson', b'person', b'top'], 'uid': [b'newton'], 'mail': [b'newton@ldap.forumsys.com'], 'cn': [b'Isaac Newton']})"""
 
 class LdapOps(object):
     """
@@ -31,15 +30,18 @@ class LdapOps(object):
         user's dn. The second value is the user's attributes. If the user
         does not exist, return None.
         """
-        user = self.ldap_connection.search_s(
-                self.base_dn,
-                ldap.SCOPE_SUBTREE,
-                f'uid={username}',
-                )
         try:
-            return user[0]
-        except IndexError:
-            return None
+            user = self.ldap_connection.search_s(
+                    self.base_dn,
+                    ldap.SCOPE_SUBTREE,
+                    f'uid={username}',
+                    )
+            if user:
+                return user
+            else:
+                return f'Username {username}: not found.'
+        except Exception as e:
+            raise e
 
     def user_exists(self, username:str) -> bool:
         """If user exists, return True. Else, return False"""
@@ -50,18 +52,23 @@ class LdapOps(object):
         except TypeError:
             return False
 
-    def get_user_objectclass(self, username:str) -> list:
+    def get_all_user_objectclass(self, username:str) -> list:
         """
         Call "self.get_user" method. If the user exists, return a list of
         the user's objectClasses. Example: ['inetOrgPerson',
         'organizationalPerson', 'person', 'top']
         """
         try:
-            user = self.get_user(username)
-            if user:
-                return [x.decode() for x in user[1]['objectClass']]
+            all_user_objectclass = self.ldap_connection.search_s(
+                    self.base_dn,
+                    ldap.SCOPE_SUBTREE,
+                    f'uid={username}',
+                    ['objectClass'],
+                    )
+            if all_user_objectclass:
+                return [x.decode() for x in all_user_objectclass[1]['objectClass']]
             else:
-                return f'{username} is not a valid uid in OpenLDAP'
+                return f'Username {username}: not found.'
         except Exception as e:
             print(e)
 
