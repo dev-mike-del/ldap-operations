@@ -21,7 +21,7 @@ class LdapOps(object):
             print("Try/Except >>> {}".format(e))
             raise e
 
-    def get_user(self, username:str):
+    def get_user(self, username:str) -> tuple:
         user = self.ldap_connection.search_s(
                 self.base_dn,
                 ldap.SCOPE_SUBTREE,
@@ -32,7 +32,7 @@ class LdapOps(object):
         except IndexError:
             return None
 
-    def user_exists(self, username:str):
+    def user_exists(self, username:str) -> bool:
         try:
             user = self.get_user(username)
             if user[0]:
@@ -40,7 +40,7 @@ class LdapOps(object):
         except TypeError:
             return False
 
-    def get_user_objectclass(self, username:str):
+    def get_user_objectclass(self, username:str) -> list:
         try:
             user = self.get_user(username)
             if user:
@@ -57,7 +57,7 @@ class LdapOps(object):
                 )
         return [x for x in results]
 
-    def get_all_persons(self):
+    def get_all_persons(self) -> list:
         try:
             all_persons = self.ldap_connection.search_s(
                     self.base_dn,
