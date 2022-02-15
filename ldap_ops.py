@@ -66,7 +66,7 @@ class LdapOps(object):
                     ['objectClass'],
                     )
             if all_user_objectclass:
-                return [x.decode() for x in all_user_objectclass[1]['objectClass']]
+                return [x.decode() for x in all_user_objectclass[0][1]['objectClass']]
             else:
                 return f'Username {username}: not found.'
         except Exception as e:
