@@ -82,7 +82,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+[![Python Interpreter Example Screen Shot][python_interpreter_example-screenshot]](https://docs.python.org/3/tutorial/interpreter.html)
 
 This project offers the script ldap_ops.py as a developer tool for easy to use and straight foward LDAP queries. The script contains the class LDAPOps. That class creates a connection to an OpenLDAP server and maintains that connection for use through out the Class methods. The class methods use the LDAP connection to perform searches/queries using the search/queries provide by the Python library python-ldap.
 
@@ -253,3 +253,4 @@ Project Link: [https://github.com/dev-mike-del/ldap_operations](https://github.c
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/mike-del
 [forumSystems-screenshot]: screen_shots/forumSystems.png
+[python_interpreter_example-screenshot]: screen_shots/python_interpreter_example.png
