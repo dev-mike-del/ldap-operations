@@ -87,7 +87,6 @@
 This project offers the script ldap_ops.py as a developer tool for easy to use and straight foward LDAP queries. The script contains the class LDAPOps. That class creates a connection to an OpenLDAP server and maintains that connection for use through out the Class methods. The class methods use the LDAP connection to perform searches/queries using the search/queries provide by the Python library python-ldap.
 
 The repo uses Forum Systems' LDAP Test Server to demonstrate how the search functions work on a live OpenLDAP server.
-[![Forum Systems Logo][forumSystems-screenshot]](https://www.forumsys.com/2014/02/22/online-ldap-test-server/)
 
 Methods:
 * get_user(self, username:str) -> tuple:
